@@ -10,7 +10,7 @@
         title?: string;
     }
 
-    const {children, title = "Ghostty Config"}: Props = $props();
+    const {children, title = "Ghostty Config Studio"}: Props = $props();
 
     $effect(() => {app.title = title;});
 

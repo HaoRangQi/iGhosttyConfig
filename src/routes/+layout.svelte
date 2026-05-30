@@ -59,8 +59,8 @@
 
 
     const htmlTitle = $derived.by(() => {
-        const name = app.title === "Ghostty Config" ? "" : app.title;
-        let title = "Ghostty Config";
+        const name = app.title === "Ghostty Config Studio" ? "" : app.title;
+        let title = "Ghostty Config Studio";
         if (name) title = `${name} - ${title}`;
         return title;
     });
@@ -138,8 +138,8 @@
                 Font Playground
             </Tab>
             <Gap expand={true} />
-            <Tab route="https://github.com/zerebos/ghostty-config">
-                {#snippet icon()}<div class="icon-wrapper github"><img src={github} alt="Ghostty Config GitHub" /></div>{/snippet}
+            <Tab route="https://github.com/HaoRangQi/iGhosttyConfig">
+                {#snippet icon()}<div class="icon-wrapper github"><img src={github} alt="Ghostty Config Studio GitHub" /></div>{/snippet}
                 GitHub
             </Tab>
             <Tab route="https://ghostty.org/">

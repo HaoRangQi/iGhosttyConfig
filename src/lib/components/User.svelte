@@ -2,16 +2,15 @@
     import {page} from "$app/state";
     import logo from "$lib/images/avatar.webp";
 
-    const {route = "/", name = "Ghostty Config"} = $props();
+    const {route = "/", name = "Ghostty Config Studio"} = $props();
     const path = $derived(page.url.pathname);
 
     const selected = $derived(path === route);
 </script>
 
-<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
 <a href={route} class="user-tab" class:selected>
     <div class="user-avatar">
-        <img src={logo} alt="Ghostty Config Logo" />
+        <img src={logo} alt="Ghostty Config Studio Logo" />
     </div>
     <div class="user-label">
         <div class="user-name">{name}</div>

@@ -1,25 +1,33 @@
 {
-    "name": "ghostty-config",
+    "name": "ghostty-config-studio",
     "version": "0.2.0",
     "description": "A beautiful config generator for Ghostty terminal.",
     "author": "Zerebos",
     "repository": {
         "type": "git",
-        "url": "https://github.com/zerebos/ghostty-config"
+        "url": "https://github.com/HaoRangQi/iGhosttyConfig.git"
     },
     "license": "Apache-2.0",
     "scripts": {
         "dev": "vite dev",
+        "dev:local": "node scripts/dev-local.mjs",
+        "local:server": "node scripts/local-ghostty-server.mjs",
+        "dev:remote": "PUBLIC_GHOSTTY_CONFIG_MODE=remote vite dev --host 127.0.0.1",
         "build": "vite build",
+        "start": "node build",
         "preview": "vite preview",
         "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
         "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
         "test": "vitest run . --reporter=verbose",
+        "test:e2e": "playwright test",
+        "test:all": "npm run test && npm run test:e2e",
         "lint": "eslint .",
         "format": "prettier --write . && eslint . --fix"
     },
     "devDependencies": {
+        "@playwright/test": "^1.60.0",
         "@sveltejs/adapter-auto": "^7.0.1",
+        "@sveltejs/adapter-node": "^5.5.4",
         "@sveltejs/adapter-static": "^3.0.10",
         "@sveltejs/kit": "^2.53.0",
         "@sveltejs/vite-plugin-svelte": "^6.2.4",
@@ -30,6 +38,7 @@
         "eslint": "^10.0.1",
         "eslint-config-prettier": "^10.1.8",
         "eslint-plugin-svelte": "^3.15.0",
+        "jsdom": "^29.1.1",
         "prettier": "^3.8.1",
         "prettier-plugin-svelte": "^3.5.0",
         "svelte": "^5.53.2",

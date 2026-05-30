@@ -7,20 +7,20 @@
     import Checkbox from "$lib/components/settings/Checkbox.svelte";
 </script>
 
-<Page title="Ghostty Config">
+<Page title="Ghostty Config Studio">
     <section>
         <div class="user">
             <div class="user-avatar">
-                <img src={logo} alt="Ghostty Config Logo" />
+                <img src={logo} alt="Ghostty Config Studio Logo" />
             </div>
             <div class="user-label">
-                <div class="user-name">Ghostty Config</div>
+                <div class="user-name">Ghostty Config Studio</div>
                 <div class="user-subtext">by <a href="https://zerebos.com" target="_blank" rel="noopener noreferrer">@zerebos</a></div>
             </div>
         </div>
         <Admonition>
             This tool <em>will</em> have bugs! If you run into any, or have suggestions, please submit them
-            <a href="https://github.com/zerebos/ghostty-config/issues" target="_blank" rel="noopener noreferrer">on GitHub</a>.
+            <a href="https://github.com/HaoRangQi/iGhosttyConfig/issues" target="_blank" rel="noopener noreferrer">on GitHub</a>.
         </Admonition>
         <Group title="Recent Changes">
             <ul>

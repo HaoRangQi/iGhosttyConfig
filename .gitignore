@@ -5,12 +5,15 @@ sverdle
 notes
 *.md
 !README.md
+!docs/**/*.md
 
 # Output
 .output
 .vercel
 /.svelte-kit
 /build
+test-results/
+playwright-report/
 
 # OS
 .DS_Store

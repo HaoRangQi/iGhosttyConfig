@@ -8,10 +8,10 @@ const colors = ["background", "foreground", "cursor-color", "selection-backgroun
 export default function (configString: string) {
     const lines = configString.split("\n");
 
-    const results = {
-        palette: Array(256) as Array<HexColor | "">,
+    const results: {palette: Array<HexColor | "">, keybind: KeybindString[], [key: string]: string | string[];} = {
+        palette: new Array<HexColor | "">(256),
         keybind: [] as KeybindString[]
-    } as {palette: Array<HexColor | "">, keybind: KeybindString[], [key: string]: string | string[];};
+    };
 
     for (let p = 0; p < 256; p++) results.palette[p] = "";
 
@@ -51,4 +51,3 @@ export default function (configString: string) {
 
     return results;
 };
-

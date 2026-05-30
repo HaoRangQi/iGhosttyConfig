@@ -74,6 +74,19 @@ export function load(conf: Partial<typeof config>) {
     }
 }
 
+export function resetConfig() {
+    for (const key in defaults) {
+        if (Array.isArray(defaults[key as keyof DefaultConfig])) {
+            // @ts-expect-error doing this properly is hard
+            config[key as keyof typeof config] = [...defaults[key as keyof DefaultConfig]];
+        }
+        else {
+            // @ts-expect-error doing this properly is hard
+            config[key as keyof typeof config] = defaults[key as keyof DefaultConfig];
+        }
+    }
+}
+
 export async function setColorScheme(name: string): Promise<boolean> {
     if (name === "") {
         resetColorScheme();

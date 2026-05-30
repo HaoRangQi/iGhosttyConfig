@@ -6,6 +6,9 @@ import svelteConfig from "./svelte.config.js";
 
 
 export default defineConfig(
+    {
+        ignores: ["build/", ".svelte-kit/", "dist/", "custom/", "config/", "sverdle/", "notes/", "**/scripts/*.mjs"]
+    },
     defineConfig(
         ...browser,
         ...ts.configs.recommendedWithTypes
@@ -17,8 +20,5 @@ export default defineConfig(
                 __INSTALLER_LICENSE__: "readonly",
             }
         }
-    },
-    {
-        ignores: ["build/", ".svelte-kit/", "dist/", "custom/", "config/", "sverdle/", "notes/"]
     },
 );

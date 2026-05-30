@@ -57,7 +57,7 @@
 
         try {
             await navigator.share({
-                title: "Ghostty Config",
+                title: "Ghostty Config Studio",
                 text: "Ghostty config share link",
                 url: shareUrl
             });
