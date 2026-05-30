@@ -3,7 +3,7 @@
 </div>
 
 ## 一句话介绍
-i Ghostty Config 是一个基于 Web 的 [Ghostty](https://ghostty.org/) 配置编辑器：可视化调整设置、实时预览、一键导出。
+i Ghostty Config 是一个基于 Web 的 [Ghostty](https://ghostty.org/) 配置编辑器：可视化调整设置、实时预览、一键配置。
 
 ## 快速开始
 
